@@ -11,6 +11,7 @@ class CustomTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setValue(CustomTabBar(), forKey: "tabBar")
     }
 
 }

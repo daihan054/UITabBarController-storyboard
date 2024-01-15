@@ -18,6 +18,8 @@
 		C73C59282B5506C400ABE85F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C59202B5506C300ABE85F /* SettingViewController.swift */; };
 		C73C592C2B5506C400ABE85F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C59242B5506C400ABE85F /* ChatViewController.swift */; };
 		C73C592E2B550B0400ABE85F /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C592D2B550B0400ABE85F /* CustomTabBarViewController.swift */; };
+		C73C59302B5543E300ABE85F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C592F2B5543E300ABE85F /* Constants.swift */; };
+		C73C59322B55454F00ABE85F /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C59312B55454F00ABE85F /* CustomTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		C73C59202B5506C300ABE85F /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		C73C59242B5506C400ABE85F /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C73C592D2B550B0400ABE85F /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
+		C73C592F2B5543E300ABE85F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C73C59312B55454F00ABE85F /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				C73C591D2B5506C300ABE85F /* TicketViewController.swift */,
 				C73C590F2B55027600ABE85F /* Main.storyboard */,
 				C73C592D2B550B0400ABE85F /* CustomTabBarViewController.swift */,
+				C73C592F2B5543E300ABE85F /* Constants.swift */,
+				C73C59312B55454F00ABE85F /* CustomTabBar.swift */,
 				C73C59122B55027800ABE85F /* Assets.xcassets */,
 				C73C59142B55027800ABE85F /* LaunchScreen.storyboard */,
 				C73C59172B55027800ABE85F /* Info.plist */,
@@ -159,8 +165,10 @@
 				C73C590A2B55027600ABE85F /* AppDelegate.swift in Sources */,
 				C73C592C2B5506C400ABE85F /* ChatViewController.swift in Sources */,
 				C73C59262B5506C400ABE85F /* AgentViewController.swift in Sources */,
+				C73C59322B55454F00ABE85F /* CustomTabBar.swift in Sources */,
 				C73C590C2B55027600ABE85F /* SceneDelegate.swift in Sources */,
 				C73C59282B5506C400ABE85F /* SettingViewController.swift in Sources */,
+				C73C59302B5543E300ABE85F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

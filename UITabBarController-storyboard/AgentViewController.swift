@@ -9,9 +9,11 @@ import UIKit
 
 class AgentViewController: UIViewController {
 
+    @IBOutlet weak var gapBetweenIconAndDivider: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.gapBetweenIconAndDivider.constant = Constants.topGap
     }
 
 }

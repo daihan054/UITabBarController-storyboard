@@ -3,6 +3,7 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUx-wF-7GA">
-                                <rect key="frame" x="0.0" y="681" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="661" width="414" height="1"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ueb-oR-M34"/>
@@ -35,11 +36,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DUx-wF-7GA" firstAttribute="leading" secondItem="mVl-ZC-O8Q" secondAttribute="leading" id="15E-Cu-kqv"/>
-                            <constraint firstItem="Ob6-MK-cD0" firstAttribute="bottom" secondItem="DUx-wF-7GA" secondAttribute="bottom" constant="5" id="Jph-cm-l9C"/>
+                            <constraint firstItem="Ob6-MK-cD0" firstAttribute="bottom" secondItem="DUx-wF-7GA" secondAttribute="bottom" constant="25" id="Jph-cm-l9C"/>
                             <constraint firstAttribute="trailing" secondItem="DUx-wF-7GA" secondAttribute="trailing" id="hZ9-j7-GMR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Agents" image="square.and.arrow.up.fill" catalog="system" selectedImage="square.and.arrow.up" id="tPW-Ei-h7f"/>
+                    <tabBarItem key="tabBarItem" title="Agents" image="AgentsUnselected" selectedImage="AgentsSelected" id="tPW-Ei-h7f">
+                        <inset key="imageInsets" minX="0.0" minY="-10" maxX="0.0" maxY="10"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-17"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="gapBetweenIconAndDivider" destination="Jph-cm-l9C" id="fLJ-hw-SI6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c13-vb-q0n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,7 +68,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXD-7X-hm6">
-                                <rect key="frame" x="0.0" y="681" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="671" width="414" height="1"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="1rm-wQ-gux"/>
@@ -72,11 +79,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="XXD-7X-hm6" firstAttribute="leading" secondItem="4HB-tD-cbx" secondAttribute="leading" id="D80-15-4tk"/>
-                            <constraint firstItem="R33-sG-fU5" firstAttribute="bottom" secondItem="XXD-7X-hm6" secondAttribute="bottom" constant="5" id="VmY-kO-UAN"/>
+                            <constraint firstItem="R33-sG-fU5" firstAttribute="bottom" secondItem="XXD-7X-hm6" secondAttribute="bottom" constant="15" id="VmY-kO-UAN"/>
                             <constraint firstAttribute="trailing" secondItem="XXD-7X-hm6" secondAttribute="trailing" id="rR3-2R-wfB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="drop.triangle" catalog="system" selectedImage="drop.triangle.fill" id="YC2-E6-bCX"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settingsUnselected" selectedImage="settingsSelected" id="YC2-E6-bCX">
+                        <inset key="imageInsets" minX="0.0" minY="-10" maxX="0.0" maxY="10"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-17"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="gapBetweenIconAndDivider" destination="VmY-kO-UAN" id="9eM-VS-ypb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oc8-e5-Uws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,24 +124,36 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ezg-Zo-892">
-                                <rect key="frame" x="0.0" y="681" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="671" width="414" height="1"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="PSi-Mu-fy8"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0v-UD-ilt">
+                                <rect key="frame" x="146" y="342" width="37" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WvW-St-Trr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WvW-St-Trr" firstAttribute="trailing" secondItem="Ezg-Zo-892" secondAttribute="trailing" id="4au-26-L0m"/>
                             <constraint firstItem="Ezg-Zo-892" firstAttribute="leading" secondItem="WvW-St-Trr" secondAttribute="leading" id="epK-AH-QV7"/>
-                            <constraint firstItem="WvW-St-Trr" firstAttribute="bottom" secondItem="Ezg-Zo-892" secondAttribute="bottom" constant="5" id="kVR-ed-sbn"/>
+                            <constraint firstItem="WvW-St-Trr" firstAttribute="bottom" secondItem="Ezg-Zo-892" secondAttribute="bottom" constant="15" id="kVR-ed-sbn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chat" image="message" catalog="system" selectedImage="message.fill" id="c85-dG-Qls">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    <tabBarItem key="tabBarItem" title="Chat" selectedImage="ChatCircleTextSelected" id="c85-dG-Qls">
+                        <imageReference key="image" image="ChatCircleText" symbolScale="large"/>
+                        <inset key="imageInsets" minX="0.0" minY="-10" maxX="0.0" maxY="10"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-17"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="gapBetweenIconAndDivider" destination="kVR-ed-sbn" id="74B-le-4J4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yp-cA-ZQD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,7 +175,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ci-39-QNd">
-                                <rect key="frame" x="0.0" y="681" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="671" width="414" height="1"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="L1P-Yz-F0v"/>
@@ -162,10 +187,16 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="5Ci-39-QNd" secondAttribute="trailing" id="91e-UV-CzX"/>
                             <constraint firstItem="5Ci-39-QNd" firstAttribute="leading" secondItem="uPD-xM-Uh4" secondAttribute="leading" id="IUv-XF-r1E"/>
-                            <constraint firstItem="SxC-UM-CNh" firstAttribute="bottom" secondItem="5Ci-39-QNd" secondAttribute="bottom" constant="5" id="rV5-yP-zJt"/>
+                            <constraint firstItem="SxC-UM-CNh" firstAttribute="bottom" secondItem="5Ci-39-QNd" secondAttribute="bottom" constant="15" id="rV5-yP-zJt"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tickets" image="ticket" catalog="system" selectedImage="ticket.fill" id="R9l-Zh-ID8"/>
+                    <tabBarItem key="tabBarItem" title="Tickets" image="ticketsUnselected" selectedImage="ticketsSelected" id="R9l-Zh-ID8">
+                        <inset key="imageInsets" minX="0.0" minY="-10" maxX="0.0" maxY="10"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-12"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="gapBetweenIconAndDivider" destination="rV5-yP-zJt" id="pk3-uO-wAp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UcN-4S-xMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,14 +204,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="drop.triangle" catalog="system" width="128" height="112"/>
-        <image name="drop.triangle.fill" catalog="system" width="128" height="112"/>
-        <image name="message" catalog="system" width="128" height="113"/>
-        <image name="message.fill" catalog="system" width="128" height="113"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
-        <image name="ticket" catalog="system" width="128" height="84"/>
-        <image name="ticket.fill" catalog="system" width="128" height="84"/>
+        <image name="AgentsSelected" width="50" height="31"/>
+        <image name="AgentsUnselected" width="24" height="24"/>
+        <image name="ChatCircleText" width="24" height="24"/>
+        <image name="ChatCircleTextSelected" width="50" height="31"/>
+        <image name="settingsSelected" width="50" height="31"/>
+        <image name="settingsUnselected" width="24" height="24"/>
+        <image name="ticketsSelected" width="50" height="31"/>
+        <image name="ticketsUnselected" width="24" height="24"/>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

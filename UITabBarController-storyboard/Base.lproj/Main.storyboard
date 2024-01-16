@@ -192,7 +192,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Tickets" image="ticketsUnselected" selectedImage="ticketsSelected" id="R9l-Zh-ID8">
                         <inset key="imageInsets" minX="0.0" minY="-10" maxX="0.0" maxY="10"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-12"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-17"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="gapBetweenIconAndDivider" destination="rV5-yP-zJt" id="pk3-uO-wAp"/>
